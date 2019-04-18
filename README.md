@@ -21,16 +21,20 @@ In this project, we build a classifier to detect basic human emotion from facial
 ## Datasets
 ### Training
 **FER2013 database** from Kaggle
-*Challenges in Representation Learning: Facial Expression Recognition Challenge*  
+[Challenges in Representation Learning: Facial Expression Recognition Challenge](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
  
 <div align="center">
 <img src="https://github.com/isthatyoung/Face-emotion-recognition/blob/master/images/Figure%201.png" width = "359" height = "169" align=center />
 </div>  
-This dataset has 7 facial expression categories (angry, disgust, fear, happy, sad, surprise and neutral).<br>  
-Totally 28709 training images, 3589 validation images and 3589 test images with grayscale image size 48px * 48px.  
+This dataset has 7 facial expression categories (angry, disgust, fear, happy, sad, surprise and neutral).<br> 
+28709 training set + 3589 validation set of 48px * 48px grayscale images.  
 
 ### Testing
-* Testing images of FER2013  
+* 3589 Testing set of FER2013.
+* Extended Cohn-Kanade Dataset(CK+)
+This dataset has 7 facial expression categories (angry, Contempt, Disgust, Fear, Happy, Sadness, Surprise).  
+Totally 327 images with emotion labels. Because it has one label **Contempt** with our training set, so we test on CK+ without "Contempt" images.
+
 
 ## Main tasks
 * Preprocessing (recent accomplished)
@@ -66,7 +70,18 @@ Learning rate reduced 10% during **60%** and **85%** training.
 </div>   
  
 ### Testing accuracy
-Highest test accuracy on FER2013: **69%**.
+Highest test accuracy on FER2013: **76.99%**.
+
+<div align="center">
+<img src="https://github.com/isthatyoung/Face-emotion-recognition/blob/master/Train/data/accuracy.png" width = "400" height = "300" align=center />
+</div>  
+<br>
+<br>
+<div align="center">
+<img src="https://github.com/isthatyoung/Face-emotion-recognition/blob/master/images/figure%209.png" width = "400" height = "300" align=center />
+</div> 
+
+
 ## Predicting
 ### Preprocess
 <div align="center">
